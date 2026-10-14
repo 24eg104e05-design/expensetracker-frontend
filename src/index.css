@@ -1,7 +1,8 @@
-/* Single source of truth for design tokens: <repo>/apple/tailwind-v4.css
-   (which itself imports <repo>/apple/tokens.css). Per apple/USAGE.md, token
-   values must not be redefined here. */
-@import "../../apple/tailwind-v4.css";
+/* Design tokens: apple/tailwind-v4.css (which imports apple/tokens.css).
+   These files are vendored into this repo (rather than referenced from the
+   monorepo parent) so the Railway build, which clones only this repo, can
+   resolve them. Per apple/USAGE.md, token values must not be redefined here. */
+@import "../apple/tailwind-v4.css";
 
 @layer base {
   html {
